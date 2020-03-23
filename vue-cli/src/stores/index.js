@@ -16,9 +16,12 @@ const store = new Vuex.Store({
 });
 /* 
 state原始数据
-通过mutations操作state,
-getters过滤state
-actions通过commit操作mutations
+通过mutations操作state,(同步操作)
+getters过滤state,
+actions通过commit操作mutations,（异步操作）
+
+可先从action中调接口获取数据，赋值给mutations中的方法，
+在通过mutations修改state的值。
 
 state:{
 	A:[{}]
